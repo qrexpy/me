@@ -71,6 +71,12 @@ export default function Home() {
 		Icon?: React.FC<React.SVGProps<SVGSVGElement>> | LucideIcon;
 	}[] = [
 		{
+			name: "neural.py",
+			description: "A neural network implementation built from scratch in Python",
+			link: "qrexpy/neuralpy",
+			Icon: Cpu,
+		},
+		{
 			name: "StocksPredictor",
 			description: "AI-powered stock market prediction tool",
 			link: "qrexpy/StocksPredictor",
