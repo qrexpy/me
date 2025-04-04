@@ -71,6 +71,12 @@ export default function Home() {
 		Icon?: React.FC<React.SVGProps<SVGSVGElement>> | LucideIcon;
 	}[] = [
 		{
+			name: "CommitWarden",
+			description: "A Discord bot that helps manage GitHub workflows, pull requests, and repository activities directly from Discord",
+			link: "qrexpy/CommitWarden",
+			Icon: Discord,
+		},
+		{
 			name: "neural.py",
 			description: "A neural network implementation built from scratch in Python",
 			link: "qrexpy/neuralpy",
