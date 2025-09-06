@@ -7,7 +7,7 @@ import { type LanyardData, useLanyard } from "react-use-lanyard";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 export const SuspenseFallback = () => (
-	<div className="rounded-md bg-teal-950/20 border-teal-800/30 w-full h-[160px] flex justify-center items-center border">loading...</div>
+	<div className="rounded-md bg-purple-950/20 border-purple-800/30 w-full h-[160px] flex justify-center items-center border">loading...</div>
 );
 
 export function DiscordStatus() {
@@ -17,7 +17,7 @@ export function DiscordStatus() {
 		error,
 		data: { data: status } = {},
 	} = useLanyard({
-		userId: "1339988370230874164",
+		userId: "1082690591156088932",
 		apiUrl: `api.lanyard.rest`,
 	});
 
@@ -35,7 +35,7 @@ export function DiscordStatus() {
 
 	return (
 		<Card
-			className="w-full h-auto min-h-[160px] transition-all duration-200 bg-teal-950/20 hover:bg-teal-900/30 border-teal-800/30"
+			className="w-full h-auto min-h-[160px] transition-all duration-200 bg-purple-950/20 hover:bg-purple-900/30 border-purple-800/30"
 			title={`${status.discord_user.global_name || status.discord_user.username}`}
 			icon={
 				<Tooltip>
@@ -44,22 +44,31 @@ export function DiscordStatus() {
 							src={`https://cdn.discordapp.com/avatars/${status.discord_user.id}/${status.discord_user.avatar}.png`}
 							width={48}
 							height={48}
-							className="rounded-full border border-teal-800/30"
+							className="rounded-full border border-purple-800/30"
 							alt="Discord avatar"
 						/>
+						{status.discord_user.avatar_decoration_data && (
+							<Image
+								src={`https://cdn.discordapp.com/avatar-decoration-presets/${status.discord_user.avatar_decoration_data.asset}.png`}
+								width={48}
+								height={48}
+								className="absolute inset-0 rounded-full pointer-events-none"
+								alt="Avatar decoration"
+							/>
+						)}
 						<span
 							className={`absolute bottom-1 right-1 transform translate-x-1/2 translate-y-1/2 ${statusClassMap[status.discord_status]}`}
 						>
 							●
 						</span>
 					</TooltipTrigger>
-					<TooltipContent className="bg-teal-950/90 border-teal-800/30 text-teal-100">{status.discord_status}</TooltipContent>
+					<TooltipContent className="bg-purple-950/90 border-purple-800/30 text-purple-100">{status.discord_status}</TooltipContent>
 				</Tooltip>
 			}
 		>
 			<div className="flex flex-col gap-3">
 				{customStatus && (
-					<div className="flex items-center gap-2 text-sm text-teal-400">
+					<div className="flex items-center gap-2 text-sm text-purple-400">
 						<MessageCircle className="size-4" />
 						<p className="truncate">{customStatus.state}</p>
 					</div>
@@ -75,11 +84,11 @@ export function DiscordStatus() {
 												src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.large_image}.png`}
 												width={48}
 												height={48}
-												className="rounded-md transition-transform hover:scale-105 border border-teal-800/30"
+												className="rounded-md transition-transform hover:scale-105 border border-purple-800/30"
 												alt={gameActivity.assets.large_text || gameActivity.name}
 											/>
 										</TooltipTrigger>
-										<TooltipContent className="bg-teal-950/90 border-teal-800/30 text-teal-100">
+										<TooltipContent className="bg-purple-950/90 border-purple-800/30 text-purple-100">
 											{gameActivity.assets.large_text || gameActivity.name}
 										</TooltipContent>
 									</Tooltip>
@@ -90,11 +99,11 @@ export function DiscordStatus() {
 													src={`https://cdn.discordapp.com/app-assets/${gameActivity.application_id}/${gameActivity.assets.small_image}.png`}
 													width={24}
 													height={24}
-													className="absolute -bottom-2 -right-2 rounded-full border-2 border-teal-800/30 transition-transform hover:scale-105"
+													className="absolute -bottom-2 -right-2 rounded-full border-2 border-purple-800/30 transition-transform hover:scale-105"
 													alt={gameActivity.assets.small_text || ""}
 												/>
 											</TooltipTrigger>
-											<TooltipContent className="bg-teal-950/90 border-teal-800/30 text-teal-100">
+											<TooltipContent className="bg-purple-950/90 border-purple-800/30 text-purple-100">
 												{gameActivity.assets.small_text}
 											</TooltipContent>
 										</Tooltip>
@@ -102,16 +111,16 @@ export function DiscordStatus() {
 								</div>
 							)}
 							<div className="flex-1 min-w-0">
-								<p className="font-medium truncate text-lg text-teal-100">{gameActivity.name}</p>
+								<p className="font-medium truncate text-lg text-purple-100">{gameActivity.name}</p>
 								{gameActivity.details && (
-									<p className="text-sm text-teal-400/80 truncate">{gameActivity.details}</p>
+									<p className="text-sm text-purple-400/80 truncate">{gameActivity.details}</p>
 								)}
 								{gameActivity.state && (
-									<p className="text-sm text-teal-400/60 truncate">{gameActivity.state}</p>
+									<p className="text-sm text-purple-400/60 truncate">{gameActivity.state}</p>
 								)}
 							</div>
 							{gameActivity.timestamps?.start && (
-								<div className="flex items-center gap-1 text-sm text-teal-400/60 whitespace-nowrap">
+								<div className="flex items-center gap-1 text-sm text-purple-400/60 whitespace-nowrap">
 									<Clock className="size-3" />
 									{formatElapsedTime(gameActivity.timestamps.start)}
 								</div>
@@ -119,7 +128,7 @@ export function DiscordStatus() {
 						</div>
 					</div>
 				) : (
-					<div className="flex items-center gap-2 text-teal-400/60">
+					<div className="flex items-center gap-2 text-purple-400/60">
 						<CircleDashed className="size-4 animate-spin" />
 						<p>Not doing anything</p>
 					</div>

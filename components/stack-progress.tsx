@@ -12,7 +12,7 @@ export function StackProgress({
 }) {
 	return (
 		<div className="flex flex-col justify-center items-start gap-2">
-			<span className="text-lg inline-flex items-center gap-2 text-teal-500">
+			<span className="text-lg inline-flex items-center gap-2 text-purple-500">
 				<Icon className="w-5 h-5" strokeWidth={1.5} />
 				{title}
 			</span>

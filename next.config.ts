@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
 	images: {
-		remotePatterns: discordRemotePatterns(["avatars", "icons", "app-assets"]),
+		remotePatterns: discordRemotePatterns(["avatars", "icons", "app-assets", "avatar-decoration-presets"]),
 	},
 };
 

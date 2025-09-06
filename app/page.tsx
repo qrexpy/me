@@ -81,19 +81,13 @@ export default function Home() {
 			description: "A neural network implementation built from scratch in Python",
 			link: "qrexpy/neuralpy",
 			Icon: Cpu,
-		},
-		{
-			name: "StocksPredictor",
-			description: "AI-powered stock market prediction tool",
-			link: "qrexpy/StocksPredictor",
-			Icon: Sparkles,
 		}
 	];
 	const contact: Contact[] = [
 		{
 			name: "Discord",
-			link: "https://discord.com/users/1339988370230874164",
-			display: "qrexxed",
+			link: "https://discord.com/users/1082690591156088932",
+			display: "rnha",
 			Icon: Discord,
 		},
 		{
@@ -118,7 +112,7 @@ export default function Home() {
 	};
 
 	return (
-		<div className="p-2 flex flex-col text-md gap-2 bg-teal-900/10">
+		<div className="p-2 flex flex-col text-md gap-2 bg-purple-900/10">
 			<section>
 				<div>
 					I'm Qrexxed, a fullstack developer passionate about technology and innovation
@@ -126,89 +120,77 @@ export default function Home() {
 			</section>
 			<div className="flex w-full md:flex-row flex-col">
 				<section className="md:w-1/2 flex flex-col gap-2">
-					<h2 className="text-2xl font-bold text-teal-600">basic information of me</h2>
+					<h2 className="text-2xl font-bold text-purple-600">basic information of me</h2>
 					<ul className="list-disc list-inside">
 						<li>Birthday: Jan 10</li>
 						<li>Interested in LLMs and cybersecurity</li>
 					</ul>
-					<h2 className="mt-3 text-2xl font-bold text-teal-600">projects</h2>
+					<h2 className="mt-3 text-2xl font-bold text-purple-600">projects</h2>
 					<div className="flex flex-wrap gap-2">
 						{projects.map(({ Icon, ...project }) => (
 							<Card
-								className="w-56 bg-teal-950/20 hover:bg-teal-900/30 border-teal-800/30 transition-colors"
+								className="w-56 bg-purple-950/20 hover:bg-purple-900/30 border-purple-800/30 transition-colors"
 								title={project.name}
 								description={project.description}
 								href={`https://github.com/${project.link}`}
 								key={project.name}
-								icon={Icon && <Icon className="text-teal-500" />}
+								icon={Icon && <Icon className="text-purple-500" />}
 							/>
 						))}
 					</div>
 				</section>
 				<section className="mt-3 md:w-1/2 flex flex-col gap-2">
-					<h2 className="text-2xl font-bold text-teal-600">languages/stack</h2>
-					<div className="grid grid-cols-2 w-full gap-2">
-						<StackProgress 
-							title="JavaScript" 
-							progress={80} 
-							Icon={SimpleIcon({ icon: siJavascript })} 
-						/>
-						<StackProgress 
-							title="Python" 
-							progress={90} 
-							Icon={SimpleIcon({ icon: siPython })} 
-						/>
-						<StackProgress 
-							title="GO" 
-							progress={40} 
-							Icon={SimpleIcon({ icon: siGo })} 
-						/>
-						<StackProgress 
-							title="HTML" 
-							progress={74} 
-							Icon={SimpleIcon({ icon: siHtml5 })} 
-						/>
-					</div>
-					<h2 className="mt-5 text-2xl font-bold text-teal-600">additional knowledge</h2>
-					<div className="grid grid-cols-2 w-full gap-2">
-						<StackProgress 
-							title="C++" 
-							progress={20} 
-							Icon={SimpleIcon({ icon: siCplusplus })} 
-						/>
-						<StackProgress 
-							title="TypeScript" 
-							progress={37} 
-							Icon={SimpleIcon({ icon: siTypescript })} 
-						/>
-						<StackProgress 
-							title="Assembly" 
-							progress={5} 
-							Icon={SimpleIcon({ icon: siAssemblyscript })} 
-						/>
-						<StackProgress 
-							title="Java" 
-							progress={21} 
-							Icon={SimpleIcon({ icon: siJava })} 
-						/>
+					<h2 className="text-2xl font-bold text-purple-600">languages/stack</h2>
+					<div className="flex flex-col gap-2">
+						<div className="grid grid-cols-2 w-full gap-2">
+							<StackProgress 
+								title="JavaScript" 
+								progress={80} 
+								Icon={SimpleIcon({ icon: siJavascript })} 
+							/>
+							<StackProgress 
+								title="Python" 
+								progress={90} 
+								Icon={SimpleIcon({ icon: siPython })} 
+							/>
+							<StackProgress 
+								title="GO" 
+								progress={40} 
+								Icon={SimpleIcon({ icon: siGo })} 
+							/>
+							<StackProgress 
+								title="HTML" 
+								progress={74} 
+								Icon={SimpleIcon({ icon: siHtml5 })} 
+							/>
+						</div>
+						<div className="flex justify-center">
+							<div className="w-1/2">
+								<StackProgress 
+									title="TypeScript" 
+									progress={37} 
+									Icon={SimpleIcon({ icon: siTypescript })} 
+								/>
+							</div>
+						</div>
 					</div>
 				</section>
 			</div>
 			<hr className="mt-3"/>
-			<h2 className="text-2xl font-bold text-teal-600">activity</h2>
+			<h2 className="text-2xl font-bold text-purple-600">activity</h2>
 			<Suspense fallback={<SuspenseFallback />}>
 				<DiscordStatus />
 			</Suspense>
 
-			<h2 className="mt-3 text-2xl font-bold text-teal-600">contact</h2>
+			<h2 className="mt-3 text-2xl font-bold text-purple-600">contact</h2>
 			<div className="flex flex-wrap gap-4 justify-center sm:justify-start">
 				{contact.map(({ name, display, link, Icon }) => (
 					<Card
-						className="w-full sm:w-56 flex-shrink-0 flex-grow bg-teal-950/20 hover:bg-teal-900/30 border-teal-800/30 transition-colors"
+						className="w-full sm:w-56 flex-shrink-0 flex-grow bg-purple-950/20 hover:bg-purple-900/30 border-purple-800/30 transition-colors"
 						title={name}
 						description={display}
 						href={link}
-						icon={<Icon className="size-6 text-teal-500" />}
+						icon={<Icon className="size-6 text-purple-500" />}
 						key={name}
 					/>
 				))}
