@@ -56,9 +56,9 @@ const SimpleIcon = ({ icon }: { icon: { path: string } }) => (
 export default function Home() {
 	const projects: Project[] = [
 		{
-			name: "CommitWarden",
+			name: "sentinel",
 			description: "Discord bot managing GitHub workflows, pull requests, and repository activities directly from Discord",
-			link: "https://github.com/qrexpy/CommitWarden",
+			link: "https://github.com/abyssalwave/sentinel",
 			icon: <Terminal className="w-5 h-5" />,
 			tech: ["TypeScript", "Discord.js"],
 		},
