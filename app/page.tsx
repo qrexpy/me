@@ -148,7 +148,6 @@ export default function Home() {
 
 	return (
 		<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12 sm:space-y-16">
-			{/* Header */}
 			<section className="space-y-4">
 				<h1 className="text-4xl sm:text-5xl font-bold font-mono tracking-tight">
 					qrexpy
@@ -167,7 +166,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* About */}
 			<section className="space-y-4">
 				<h2 className="text-2xl font-bold font-mono border-b border-border pb-2">
 					about
@@ -189,7 +187,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Tech Stack */}
 			<section className="space-y-6">
 				<h2 className="text-2xl font-bold font-mono border-b border-border pb-2">
 					tech stack
@@ -206,7 +203,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Projects */}
 			<section className="space-y-6">
 				<h2 className="text-2xl font-bold font-mono border-b border-border pb-2">
 					projects
@@ -250,7 +246,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Achievements */}
 			<section className="space-y-6">
 				<h2 className="text-2xl font-bold font-mono border-b border-border pb-2">
 					achievements
@@ -273,7 +268,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* GitHub Contributions */}
 			<section className="space-y-6">
 				<h2 className="text-2xl font-bold font-mono border-b border-border pb-2">
 					contributions
@@ -292,7 +286,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Activity */}
 			<section className="space-y-6">
 				<h2 className="text-2xl font-bold font-mono border-b border-border pb-2">
 					activity
@@ -302,7 +295,6 @@ export default function Home() {
 				</Suspense>
 			</section>
 
-			{/* Contact / Links */}
 			<section className="space-y-6">
 				<h2 className="text-2xl font-bold font-mono border-b border-border pb-2">
 					links
@@ -323,7 +315,6 @@ export default function Home() {
 				</div>
 			</section>
 
-			{/* Footer / Gratitude */}
 			<section className="pt-8 border-t border-border">
 				<p className="text-sm text-text-muted text-center">
 					Thanks for visiting.
