@@ -2,7 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
 	images: {
-		remotePatterns: discordRemotePatterns(["avatars", "icons", "app-assets", "avatar-decoration-presets"]),
+		remotePatterns: [
+			...discordRemotePatterns(["avatars", "icons", "app-assets", "avatar-decoration-presets"]),
+			{
+				protocol: "https",
+				hostname: "i.scdn.co",
+				pathname: "/**",
+			},
+		],
 	},
 };
 

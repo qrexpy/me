@@ -12,8 +12,8 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-	title: "Qrexxed",
-	description: "Personal Portfolio",
+	title: "qrexpy",
+	description: "Developer portfolio - Open source, automation, AI, and developer productivity tools",
 };
 
 export default function RootLayout({
@@ -22,11 +22,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={`${sans.variable} dark`}>
-			<body className="font-sans antialiased bg-base text-text font-medium h-screen flex flex-col overflow-x-hidden selection:bg-surface2/60">
+		<html lang="en" className={`${sans.variable}`}>
+			<body className="font-sans antialiased bg-bg text-text min-h-screen flex flex-col overflow-x-hidden">
 				<TooltipProvider>
 					<Nav />
-					<main className="mt-20 px-2">{children}</main>
+					<main className="flex-1">{children}</main>
 				</TooltipProvider>
 				<Analytics />
 			</body>
